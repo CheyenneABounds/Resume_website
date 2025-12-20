@@ -1035,3 +1035,17 @@ pre {
     padding: var(--space-4);
   }
 }
+
+/* Connect buttons: stack on smaller screens and ensure accessible focus */
+.connect-buttons { display: flex; gap: var(--space-4); justify-content: center; align-items: center; }
+
+@media (max-width: 768px) {
+  .connect-buttons { flex-direction: column; }
+  .connect-buttons .btn { width: 100%; max-width: 360px; }
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgba(0, 255, 255, 0.18);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.06);
+}
