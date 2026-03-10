@@ -766,6 +766,10 @@ pre {
   line-height: var(--leading-relaxed);
 }
 
+.timeline-list {
+   margin-left: 0;
+}
+
 /* ============================
    SKILL BARS
    ============================ */
@@ -1083,6 +1087,7 @@ pre {
   outline-offset: 3px;
   box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.06);
 }
+
 
 
 
