@@ -774,7 +774,7 @@ pre {
 .timeline-contributions h4 {
    font-size: var(--text-base);
    font-weight: var(--font-semibold);
-   color: #7ec8c8;
+   color: var(--color-primary-dark);
    margin-bottom: var(--space-3);
 }
 
@@ -796,7 +796,7 @@ pre {
    content: '►';
    positiont: absolute;
    left: 0;
-   color: #7ec8c8;
+   color: var(--color-primary-dark);
    font-size: var(--text-sm);
 }
 
@@ -1117,6 +1117,7 @@ pre {
   outline-offset: 3px;
   box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.06);
 }
+
 
 
 
