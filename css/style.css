@@ -786,14 +786,14 @@ pre {
 
 .timeline-contributions li {
    position: relative;
-   padding-left: var(--space-6);
+   padding-left: var(--space-5);
    margin-bottom: var(--space-2);
    color: #e0e0e0;
    line-height: var(--leading-relaxed);
 }
 
 .timeline-contributions li::before {
-   content: '► ';
+   content: '►';
    positiont: absolute;
    left: 0;
    color: #7ec8c8;
@@ -1117,6 +1117,7 @@ pre {
   outline-offset: 3px;
   box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.06);
 }
+
 
 
 
