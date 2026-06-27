@@ -4,9 +4,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
-   
+    
     if (!contactForm) return;
-   
+    
     // Form validation rules
     const validationRules = {
         name: {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     };
-   
+    
     // Get all form fields
     const fields = {
         name: document.getElementById('name'),
@@ -52,61 +52,61 @@ document.addEventListener('DOMContentLoaded', () => {
         subject: document.getElementById('subject'),
         message: document.getElementById('message')
     };
-   
+    
     const formStatus = document.getElementById('form-status');
-   
+    
     // Validate single field
     const validateField = (fieldName, value) => {
         const rules = validationRules[fieldName];
-       
+        
         // Check required
         if (rules.required && !value.trim()) {
             return { valid: false, message: rules.messages.required };
         }
-       
+        
         // Check minimum length
         if (rules.minLength && value.trim().length < rules.minLength) {
             return { valid: false, message: rules.messages.minLength };
         }
-       
+        
         // Check pattern
         if (rules.pattern && !rules.pattern.test(value.trim())) {
             return { valid: false, message: rules.messages.pattern };
         }
-       
+        
         return { valid: true, message: '' };
     };
-   
+    
     // Show error for a field
     const showError = (fieldName, message) => {
         const field = fields[fieldName];
         const formGroup = field.parentElement;
         const errorMessage = formGroup.querySelector('.error-message');
-       
+        
         formGroup.classList.add('error');
         errorMessage.textContent = message;
         field.setAttribute('aria-invalid', 'true');
     };
-   
+    
     // Clear error for a field
     const clearError = (fieldName) => {
         const field = fields[fieldName];
         const formGroup = field.parentElement;
         const errorMessage = formGroup.querySelector('.error-message');
-       
+        
         formGroup.classList.remove('error');
         errorMessage.textContent = '';
         field.removeAttribute('aria-invalid');
     };
-   
+    
     // Validate all fields
     const validateForm = () => {
         let isValid = true;
-       
+        
         Object.keys(fields).forEach(fieldName => {
             const field = fields[fieldName];
             const result = validateField(fieldName, field.value);
-           
+            
             if (!result.valid) {
                 showError(fieldName, result.message);
                 isValid = false;
@@ -114,24 +114,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearError(fieldName);
             }
         });
-       
+        
         return isValid;
     };
-   
+    
     // Real-time validation on blur
     Object.keys(fields).forEach(fieldName => {
         const field = fields[fieldName];
-       
+        
         field.addEventListener('blur', () => {
             const result = validateField(fieldName, field.value);
-           
+            
             if (!result.valid) {
                 showError(fieldName, result.message);
             } else {
                 clearError(fieldName);
             }
         });
-       
+        
         // Clear error on input
         field.addEventListener('input', () => {
             const formGroup = field.parentElement;
@@ -143,29 +143,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-   
+    
     // Show form status message
     const showFormStatus = (type, message) => {
         formStatus.className = `form-status ${type}`;
         formStatus.textContent = message;
         formStatus.style.display = 'block';
-       
+        
         // Auto-hide after 5 seconds
         setTimeout(() => {
             formStatus.style.display = 'none';
         }, 5000);
     };
-   
+    
     // Handle form submission
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-       
+        
         // Validate form
         if (!validateForm()) {
             showFormStatus('error', 'Please fix the errors above before submitting.');
             return;
         }
-       
+        
         // Get form data
         const formData = {
             name: fields.name.value.trim(),
@@ -173,36 +173,36 @@ document.addEventListener('DOMContentLoaded', () => {
             subject: fields.subject.value.trim(),
             message: fields.message.value.trim()
         };
-       
+        
         // Disable submit button
         const submitButton = contactForm.querySelector('button[type="submit"]');
         const originalButtonText = submitButton.textContent;
         submitButton.disabled = true;
         submitButton.textContent = 'Sending...';
-       
+        
         try {
             // Simulate API call (replace with actual API endpoint)
             await simulateFormSubmission(formData);
-           
+            
             // Success
             showFormStatus('success', 'Thank you! Your message has been sent successfully.');
             contactForm.reset();
-           
+            
             // Log to console (for demo purposes)
             console.log('Form submitted with data:', formData);
-           
+            
         } catch (error) {
             // Error
             showFormStatus('error', 'Oops! Something went wrong. Please try again later.');
             console.error('Form submission error:', error);
-           
+            
         } finally {
             // Re-enable submit button
             submitButton.disabled = false;
             submitButton.textContent = originalButtonText;
         }
     });
-   
+    
     // Simulate form submission (replace with actual API call)
     const simulateFormSubmission = (data) => {
         return new Promise((resolve, reject) => {
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     };
-   
+    
     // ===================================
     // Example: Actual form submission using Formspree or similar service
     // ===================================
@@ -230,21 +230,21 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: JSON.stringify(data)
         });
-       
+        
         if (!response.ok) {
             throw new Error('Form submission failed');
         }
-       
+        
         return await response.json();
     };
     */
-   
+    
     // ===================================
     // Character counter for message field (optional enhancement)
     // ===================================
     const messageField = fields.message;
     const maxLength = 1000;
-   
+    
     const createCharCounter = () => {
         const counter = document.createElement('div');
         counter.className = 'char-counter';
@@ -255,23 +255,23 @@ document.addEventListener('DOMContentLoaded', () => {
             margin-top: 0.25rem;
         `;
         messageField.parentElement.appendChild(counter);
-       
+        
         const updateCounter = () => {
             const length = messageField.value.length;
             counter.textContent = `${length} / ${maxLength} characters`;
-           
+            
             if (length > maxLength * 0.9) {
                 counter.style.color = '#ef4444';
             } else {
                 counter.style.color = 'var(--text-light)';
             }
         };
-       
+        
         messageField.addEventListener('input', updateCounter);
         messageField.setAttribute('maxlength', maxLength);
         updateCounter();
     };
-   
+    
     createCharCounter();
 });
 
@@ -282,20 +282,20 @@ const RateLimiter = {
     submissions: [],
     maxSubmissions: 3,
     timeWindow: 60000, // 1 minute
-   
+    
     canSubmit() {
         const now = Date.now();
         // Remove old submissions outside time window
         this.submissions = this.submissions.filter(time => now - time < this.timeWindow);
-       
+        
         if (this.submissions.length >= this.maxSubmissions) {
             return false;
         }
-       
+        
         this.submissions.push(now);
         return true;
     },
-   
+    
     getRemainingTime() {
         if (this.submissions.length === 0) return 0;
         const oldestSubmission = Math.min(...this.submissions);
@@ -308,3 +308,4 @@ const RateLimiter = {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { RateLimiter };
 }
+

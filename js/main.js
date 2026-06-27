@@ -1,3 +1,26 @@
+// Theme toggle — persists choice in localStorage
+(function() {
+  const saved = localStorage.getItem('cb-theme');
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    if (isLight) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('cb-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('cb-theme', 'light');
+    }
+  });
+});
+
 /**
  * Main JavaScript for Creative Resume Website
  * Handles navigation, animations, and interactive elements
@@ -5,19 +28,19 @@
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-   
+    
     // ===========================
     // MOBILE MENU TOGGLE
     // ===========================
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarMenu = document.getElementById('navbar-menu');
-   
+    
     if (navbarToggle && navbarMenu) {
         navbarToggle.addEventListener('click', function() {
             navbarToggle.classList.toggle('active');
             navbarMenu.classList.toggle('active');
         });
-       
+        
         // Close menu when clicking on a link
         const navbarLinks = document.querySelectorAll('.navbar-link');
         navbarLinks.forEach(link => {
@@ -26,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 navbarMenu.classList.remove('active');
             });
         });
-       
+        
         // Close menu when clicking outside
         document.addEventListener('click', function(event) {
             const isClickInsideNav = navbarToggle.contains(event.target) || navbarMenu.contains(event.target);
@@ -36,12 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-   
+    
     // ===========================
     // NAVBAR SCROLL EFFECT
     // ===========================
     const navbar = document.getElementById('navbar');
-   
+    
     if (navbar) {
         window.addEventListener('scroll', function() {
             if (window.scrollY > 50) {
@@ -51,41 +74,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-   
+    
     // ===========================
     // SMOOTH SCROLLING FOR ANCHOR LINKS
     // ===========================
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
-   
+    
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
-           
+            
             // Skip if it's just '#'
             if (href === '#' || href === '#!') {
                 e.preventDefault();
                 return;
             }
-           
+            
             const target = document.querySelector(href);
-           
+            
             if (target) {
                 e.preventDefault();
-               
+                
                 const navbarHeight = navbar ? navbar.offsetHeight : 0;
                 const targetPosition = target.offsetTop - navbarHeight - 20;
-               
+                
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
                 });
-               
+                
                 // Update active nav link
                 updateActiveNavLink(href);
             }
         });
     });
-   
+    
     // ===========================
     // ACTIVE NAVIGATION LINK ON SCROLL
     // ===========================
@@ -98,26 +121,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-   
+    
     // Update active link based on scroll position
     const sections = document.querySelectorAll('section[id]');
-   
+    
     if (sections.length > 0) {
         window.addEventListener('scroll', function() {
             const scrollPosition = window.scrollY + 100;
-           
+            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.offsetHeight;
                 const sectionId = section.getAttribute('id');
-               
+                
                 if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
                     updateActiveNavLink(`#${sectionId}`);
                 }
             });
         });
     }
-   
+    
     // ===========================
     // ANIMATION ON SCROLL
     // ===========================
@@ -125,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-   
+    
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -134,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-   
+    
     // Observe elements with animation classes
     const animatedElements = document.querySelectorAll('.animate-fade-in, .animate-slide-in-left, .animate-slide-in-right');
     animatedElements.forEach(element => {
@@ -143,12 +166,12 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(element);
     });
-   
+    
     // ===========================
     // SKILL BAR ANIMATION
     // ===========================
     const skillBars = document.querySelectorAll('.skill-progress');
-   
+    
     if (skillBars.length > 0) {
         const skillObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
@@ -162,15 +185,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }, observerOptions);
-       
+        
         skillBars.forEach(bar => skillObserver.observe(bar));
     }
-   
+    
     // ===========================
     // LAZY LOADING FOR IMAGES
     // ===========================
     const lazyImages = document.querySelectorAll('img[data-src]');
-   
+    
     if (lazyImages.length > 0) {
         const imageObserver = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
@@ -182,17 +205,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-       
+        
         lazyImages.forEach(img => imageObserver.observe(img));
     }
-   
+    
     // ===========================
     // TYPING ANIMATION (Optional for Hero)
     // ===========================
     function typeWriter(element, text, speed = 50) {
         let i = 0;
         element.textContent = '';
-       
+        
         function type() {
             if (i < text.length) {
                 element.textContent += text.charAt(i);
@@ -200,17 +223,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(type, speed);
             }
         }
-       
+        
         type();
     }
-   
+    
     // Uncomment to enable typing animation
     // const heroTitle = document.querySelector('.hero-title');
     // if (heroTitle) {
     //     const originalText = heroTitle.textContent;
     //     typeWriter(heroTitle, originalText, 50);
     // }
-   
+    
     // ===========================
     // BACK TO TOP BUTTON (Optional)
     // ===========================
@@ -236,9 +259,9 @@ document.addEventListener('DOMContentLoaded', function() {
             box-shadow: var(--shadow-lg);
             z-index: 1000;
         `;
-       
+        
         document.body.appendChild(button);
-       
+        
         window.addEventListener('scroll', function() {
             if (window.scrollY > 300) {
                 button.style.opacity = '1';
@@ -248,30 +271,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 button.style.visibility = 'hidden';
             }
         });
-       
+        
         button.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-       
+        
         button.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-4px)';
         });
-       
+        
         button.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0)';
         });
     }
-   
+    
     // Uncomment to enable back to top button
     // createBackToTopButton();
-   
+    
     // ===========================
     // CONSOLE MESSAGE
     // ===========================
-    console.log('%cHello there!', 'font-size: 20px; font-weight: bold; color: #9333ea;');
+    console.log('%c👋 Hello there!', 'font-size: 20px; font-weight: bold; color: #9333ea;');
     console.log('%cThanks for checking out my website!', 'font-size: 14px; color: #a1a1aa;');
     console.log('%cFeel free to reach out if you want to connect.', 'font-size: 14px; color: #a1a1aa;');
 });
@@ -311,3 +334,4 @@ function throttle(func, limit) {
 
 // Export functions if using modules
 // export { debounce, throttle };
+

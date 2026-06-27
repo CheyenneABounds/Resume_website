@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cheyenne Bounds - Cybersecurity Engineer specializing in Zero Trust Architecture, Security Operations, and Compliance">
-    <title>Cheyenne Bounds - Cybersecurity Engineer</title>
-    
-    <!-- Google Fonts -->
+    <meta name="description" content="Cheyenne Bounds — Cybersecurity Engineer specializing in Zero Trust Architecture, Security Operations, and Compliance at T-Mobile.">
+    <title>Cheyenne Bounds — Cybersecurity Engineer</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container navbar-container">
-            <a href="index.html" class="navbar-brand text-gradient">Cheyenne Bounds</a>
-            
+            <a href="index.html" class="navbar-brand">Cheyenne Bounds</a>
+
             <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
                 <span class="navbar-toggle-bar"></span>
                 <span class="navbar-toggle-bar"></span>
                 <span class="navbar-toggle-bar"></span>
             </button>
-            
+
             <ul class="navbar-menu" id="navbar-menu">
-                <li><a href="#home" class="navbar-link active" aria-label="Navigate to Home section">Home</a></li>
-                <li><a href="#about" class="navbar-link" aria-label="Navigate to About section">About</a></li>
-                <li><a href="#experience" class="navbar-link" aria-label="Navigate to Experience section">Experience</a></li>
-                <li><a href="#skills" class="navbar-link" aria-label="Navigate to Skills section">Skills</a></li>
-                <li><a href="#education" class="navbar-link" aria-label="Navigate to Education section">Education</a></li>
-                <li><a href="contact.html" class="navbar-link" aria-label="Navigate to Contact page">Contact</a></li>
+                <li><a href="#home" class="navbar-link active">Home</a></li>
+                <li><a href="#about" class="navbar-link">About</a></li>
+                <li><a href="#experience" class="navbar-link">Experience</a></li>
+                <li><a href="#skills" class="navbar-link">Skills</a></li>
+                <li><a href="#education" class="navbar-link">Education</a></li>
+                <li><a href="projects.html" class="navbar-link">Projects</a></li>
+                <li><a href="blog.html" class="navbar-link">Blog</a></li>
+                <li><a href="contact.html" class="navbar-link">Contact</a></li>
             </ul>
+
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Switch theme">◐</button>
         </div>
     </nav>
 
@@ -42,20 +44,16 @@
         <div class="hero-background"></div>
         <div class="container hero-content">
             <div class="animate-fade-in">
-                <h1 class="hero-title">
-                    Hi, I'm <span class="text-gradient">Cheyenne Bounds</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Cybersecurity Engineer | Zero Trust Architecture Specialist | Security Operations Expert
-                </p>
-                <p style="max-width: 700px; margin: 0 auto var(--space-8); color: var(--color-text-secondary); font-size: var(--text-lg);">
-                    Proven track record of innovation and leadership in the development and implementation of secure network infrastructure solutions by leveraging in-depth understanding of Zero Trust Network Access (ZTNA) concepts and application-level segmentation. 
-                    Passion for maintaining the security of networks with a deep understanding of the security protocols and best practices associated with ZTNA, as well as experience in cyber security incident management and response. 
-                    Ability to work independently and as part of a team, with excellent communication and problem-solving skills.
+                <p class="hero-eyebrow">Cybersecurity Engineer</p>
+                <h1 class="hero-title">Cheyenne Bounds</h1>
+                <p class="hero-subtitle">Zero Trust Architecture · Security Operations · Compliance</p>
+                <p class="hero-description">
+                    Proven track record in secure network infrastructure, ZTNA implementation,
+                    and compliance-aligned security programs at T-Mobile. Based in Seattle, WA.
                 </p>
                 <div class="hero-cta">
-                    <a href="contact.html" class="btn btn-primary btn-lg" aria-label="Get in touch with Cheyenne Bounds" role="button">Get In Touch</a>
-                    
+                    <a href="contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+                    <a href="assets/Cheyenne_Resume.pdf" class="btn btn-outline btn-lg" download>Download Resume</a>
                 </div>
             </div>
         </div>
@@ -64,197 +62,148 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <div class="text-center mb-8">
-                <h2 class="text-gradient">About Me</h2>
-                <p class="text-xl text-secondary" style="max-width: 700px; margin: 0 auto;">
-                    Cybersecurity & Systems Engineer specializing in enterprise security solutions
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-8">
-                <div class="card card-gradient animate-slide-in-left">
-                    <h3 class="card-title">My Expertise</h3>
-                    <p class="card-description">
-                        Specializing in Zero Trust Architecture, security operations, and compliance frameworks. 
-                        Experienced in deploying and administering enterprise security tools, aligning systems with 
-                        regulatory requirements (SOX, PCI, CPNI), and automating access reviews and vulnerability management.
+            <span class="section-label">About</span>
+            <div class="about-grid">
+                <div class="about-statement">
+                    <h2>Building secure infrastructure with clarity and precision.</h2>
+                    <p>
+                        I'm a Cybersecurity Engineer at T-Mobile specializing in Zero Trust Network Access,
+                        where I bridge the gap between security requirements and operational realities.
+                        Proven track record of innovation and leadership in developing and implementing
+                        secure network infrastructure solutions using ZTNA concepts and application-level segmentation.
+                    </p>
+                    <p>
+                        I bring a security-first mindset to every layer of the stack — from identity and access management
+                        to compliance documentation and audit readiness. Experienced in cyber security incident management,
+                        working independently and as part of cross-functional teams.
                     </p>
                 </div>
-                
-                <div class="card card-gradient animate-slide-in-right">
-                    <h3 class="card-title">What I Deliver</h3>
-                    <p class="card-description">
-                        Hands-on experience in firewall administration, incident response, cloud security, and audit lifecycle 
-                        documentation. Proven ability to troubleshoot system alerts, support remediation efforts, and collaborate 
-                        across IT and security teams to deliver secure, business-aligned solutions.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Key Achievements -->
-            <div style="max-width: 900px; margin: var(--space-12) auto 0;">
-                <h3 class="text-center mb-8" style="font-size: var(--text-2xl);">Key Achievements</h3>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="card">
-                        <h4 class="card-title" style="font-size: var(--text-lg); margin-bottom: var(--space-3);">Zero Trust Implementation</h4>
-                        <p class="card-description" style="font-size: var(--text-base);">
-                            Developed and enforced secure, scalable access controls for SaaS applications using identity-driven Zero Trust models.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h4 class="card-title" style="font-size: var(--text-lg); margin-bottom: var(--space-3);">Security Hardening</h4>
-                        <p class="card-description" style="font-size: var(--text-base);">
-                            Led security configuration assessments and remediations to harden enterprise SaaS environments and reduce misconfiguration risks.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h4 class="card-title" style="font-size: var(--text-lg); margin-bottom: var(--space-3);">Automation Excellence</h4>
-                        <p class="card-description" style="font-size: var(--text-base);">
-                            Automated access review and policy validation workflows to increase operational efficiency and improve audit readiness.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <h4 class="card-title" style="font-size: var(--text-lg); margin-bottom: var(--space-3);">Efficiency Improvements</h4>
-                        <p class="card-description" style="font-size: var(--text-base);">
-                            Streamlined firewall rule workflows, reducing turnaround times by 25% and improving network operations response by 20%.
-                        </p>
-                    </div>
+                <div class="about-facts">
+                    <dl class="facts-list">
+                        <dt>Role</dt>
+                        <dd>Cybersecurity Engineer, ZTNA</dd>
+                        <dt>Company</dt>
+                        <dd>T-Mobile</dd>
+                        <dt>Location</dt>
+                        <dd>Seattle, WA</dd>
+                        <dt>Focus</dt>
+                        <dd>Zero Trust Architecture</dd>
+                        <dt>Experience</dt>
+                        <dd>5+ years</dd>
+                        <dt>Email</dt>
+                        <dd><a href="mailto:contact@cheyennebounds.com">contact@cheyennebounds.com</a></dd>
+                    </dl>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="section section-lg">
+    <section id="experience" class="section">
         <div class="container">
-            <div class="text-center mb-8">
-                <h2 class="text-gradient">Professional Experience</h2>
-                <p class="text-xl text-secondary">My career journey in cybersecurity and systems engineering</p>
-            </div>
-            
-            <div style="max-width: 900px; margin: 0 auto;">
-                <div class="timeline">
-                    <div class="timeline-item animate-fade-in">
-                        <div class="timeline-date">February 2025 - Present</div>
-                        <h3 class="timeline-title">Cybersecurity Engineer - ZTNA</h3>
-                        <div class="timeline-company">T-Mobile</div>
-                        <p class="timeline-description">
-                            Develop, implement, and maintain secure network infrastructure solutions utilizing Zero Trust Network Access (ZTNA) and Virtual Private Network (VPN) technologies. 
-                            Assess existing network security architectures and document findings and recommendations aligned with industry best practices. 
-                            Monitor network security protocols and best practices related to ZTNA and provide guidance on improvements or updates. Respond to and manage cyber security incidents. 
-                            Act as a leader and mentor to junior technical personnel. Collaborate with internal teams to develop and improve processes related to network security. 
-                            Analyze data and trends to understand network security threats and vulnerabilities. Create and maintain technical documentation related to network security. 
-                            Research and recommend new products and technologies to improve network security. Perform hands-on implementations and configurations of network security technologies. 
-                            Ensure all security operations and maintenance activities are fully documented and up to date.
+            <span class="section-label">Experience</span>
+            <h2 class="section-heading">Professional History</h2>
+
+            <div class="exp-list" style="max-width: 900px;">
+
+                <div class="exp-item animate-fade-in">
+                    <div class="exp-year">2/2025 — Present</div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Cybersecurity Engineer, ZTNA</h3>
+                        <p class="exp-company">T-Mobile · Seattle, WA</p>
+                        <p class="exp-desc">
+                            Develop, implement, and maintain secure network infrastructure solutions utilizing
+                            Zero Trust Network Access (ZTNA) and VPN technologies. Monitor security protocols,
+                            respond to cyber security incidents, and act as a leader and mentor to junior personnel.
                         </p>
-                        <div class="timeline-contributions">
-                            <h4>Key contributions</h4>
-                            <ul>
-                                <li> Supported identity- and policy-based access control implementations using Zscaler, integrating SCIM provisioning and Microsoft Entra ID to enforce Zero Trust access across legacy and data center–hosted environments.</li>
-                                <li> Improved access visibility and reduced misconfigurations across enterprise infrastructure by aligning identity-based controls with existing network architectures.</li>
-                                <li> Automated 42% of previously manual security and access management tasks, increasing operational efficiency and reducing engineer workload.</li>
-                                <li> Led and participated in security control walkthroughs with GRC, infrastructure, and application teams, validating alignment between technical controls, SLAs, and compliance requirements.</li>
-                                <li> Participated in control effectiveness testing and remediation efforts that resulted in 100% compliance with SOX, PCI, and CPNI requirements.</li>
-                                <li> Developed standardized documentation and repeatable evidence templates to improve audit readiness and support ongoing compliance cycles.</li>
-                                <li> Partnered with threat, engineering, and compliance teams to identify internal vulnerabilities, strengthen the control environment, and reduce insider risk in alignment with security best practices.</li>
-                            </ul>
-                        </div>
-                        <div class="flex gap-2" style="margin-top: 1rem;">
+                        <ul class="exp-bullets">
+                            <li>Supported identity- and policy-based access control using Zscaler, integrating SCIM provisioning and Microsoft Entra ID to enforce Zero Trust access across legacy and data center environments.</li>
+                            <li>Automated 42% of previously manual security and access management tasks, increasing operational efficiency.</li>
+                            <li>Participated in control effectiveness testing and remediation resulting in 100% compliance with SOX, PCI, and CPNI requirements.</li>
+                            <li>Developed standardized documentation and repeatable evidence templates to improve audit readiness.</li>
+                            <li>Partnered with threat, engineering, and compliance teams to identify internal vulnerabilities and strengthen the control environment.</li>
+                        </ul>
+                        <div class="flex gap-2" style="margin-top: var(--space-4);">
                             <span class="badge badge-primary">Zero Trust</span>
-                            <span class="badge badge-secondary">ZTNA</span>
-                            <span class="badge badge-accent">IAM</span>
+                            <span class="badge badge-accent">ZTNA</span>
+                            <span class="badge badge-secondary">IAM</span>
                             <span class="badge badge-success">Compliance</span>
                         </div>
                     </div>
-                    
-                    <div class="timeline-item animate-fade-in">
-                        <div class="timeline-date">April 2024 - February 2025</div>
-                        <h3 class="timeline-title">Engineer, Systems Architecture</h3>
-                        <div class="timeline-company">T-Mobile</div>
-                        <p class="timeline-description">
-                            Oversaw total life cycle focus for the program from requirements development and architecture creation with a focus on complex system designs through architect definition. 
-                            Partnered closely with internal teams, SMEs, program management, and Systems Engineering leadership to drive the technical solution across the program. 
-                            Ensure the requirements and architecture focused on “building the right thing.” 
-                            Developed architectures, defining the physical architecture, allocating requirements to architecture elements, deriving requirements to drive details into the model, 
-                            creating and refining modeling standards and design patterns, and distributing and merging model elements back into the baseline.</p>
-                        <div class="timeline-contributions">
-                            <h4>Key contributions</h4>
-                            <ul>
-                                <li> Designed and deployed hybrid-cloud infrastructure aligned with Zero Trust and On-Prem Cloud principles.</li>
-                                <li> Integrated advanced security protocols and hardening techniques to proactively reduce vulnerabilities and improve system resilience.</li>
-                                <li> Automated network operations, improving response times by 20% and reducing manual intervention.</li>
-                                <li> Led capacity planning initiatives to support traffic growth without degrading network performance.</li>
-                                <li> Developed and enforced policies to ensure high availability and compliance with SOX, PCI, and CPNI regulations.</li>
-                                <li> Collaborated with engineering and security teams to deliver secure, business-aligned network solutions.</li>
-                                <li> Mentored junior and senior engineers in troubleshooting, infrastructure best practices, and security-first design.</li>
-                            </ul>
-                        </div>
-                        <div class="flex gap-2" style="margin-top: 1rem;">
-                            <span class="badge badge-primary">Cloud Security</span>
-                            <span class="badge badge-secondary">Automation</span>
-                            <span class="badge badge-accent">Network Security</span>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item animate-fade-in">
-                        <div class="timeline-date">September 2021 - April 2024</div>
-                        <h3 class="timeline-title">Associate Engineer, Systems Architecture</h3>
-                        <div class="timeline-company">T-Mobile</div>
-                        <p class="timeline-description">
-                            Designed and developed system architectures, and defined key capabilities and performance requirements. 
-                            Defined total systems design and technology maturity constraints in accordance with mission requirements. 
-                            Developed system element architecture and design and interface definitions. 
-                            Defined system implementation approach and operational concept. 
-                            Developed models and architectural guidelines for current and future system development.</p>
-                        <div class="timeline-contributions">
-                            <h4>Key contributions</h4>
-                            <ul>
-                                <li> Led firewall and perimeter security operations, supporting high-priority applications and audits for SOX/PCI compliance.</li>
-                                <li> Managed escalations and high-pressure project requests with efficiency and consistent delivery under tight deadlines.</li>
-                                <li> Streamlined approval and validation workflows, reducing firewall rule turnaround times by 25%.</li>
-                                <li> Identified operational risks and implemented proactive measures to strengthen compliance readiness.</li>
-                                <li> Facilitated application migrations (e.g., PCF and TKE) while ensuring policy integrity and secure access during transition.</li>
-                                <li> Delivered technical documentation and collaborated with security, payment, and ops teams for infrastructure-aligned change control.</li>
-                                <li> Streamlined workflows and advocated for enhancements to operational tools to reduce friction and improve system performance.</li>
-                            </ul>
-                        </div>
-                        <div class="flex gap-2" style="margin-top: 1rem;">
-                            <span class="badge badge-primary">Firewall Management</span>
-                            <span class="badge badge-secondary">SOX/PCI</span>
-                            <span class="badge badge-success">Migration</span>
-                        </div>
-                    </div>
-                    
-                    <div class="timeline-item animate-fade-in">
-                        <div class="timeline-date">April 2021 - June 2021</div>
-                        <h3 class="timeline-title">Launch Engineer Intern</h3>
-                        <div class="timeline-company">Firefly Aerospace</div>
-                        <p class="timeline-description">
-                            Developed launch pad safety beacon and public alert systems. Automated internal workflows to 
-                            improve testing operations by 30%. Supported pad readiness and engineering problem-solving during 
-                            critical launch preparation stages.
-                        </p>
-                        <div class="flex gap-2" style="margin-top: 1rem;">
-                            <span class="badge badge-primary">Automation</span>
-                            <span class="badge badge-secondary">Safety Systems</span>
-                        </div>
-                    </div>
+                </div>
 
-                    <div class="timeline-item animate-fade-in">
-                        <div class="timeline-date">August 2015 - May 2016</div>
-                        <h3 class="timeline-title">Technical Support Specialist</h3>
-                        <div class="timeline-company">Wave Broadband</div>
-                        <p class="timeline-description">
-                            Delivered remote technical troubleshooting for broadband, TV, and voice services. Identified root 
-                            causes and implemented solutions, reducing service disruptions by 20%. Improved customer retention 
-                            through accurate diagnostics and secure data handling.
+                <div class="exp-item animate-fade-in">
+                    <div class="exp-year">4/2024 — 2/2025</div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Engineer, Systems Architecture</h3>
+                        <p class="exp-company">T-Mobile · Seattle, WA</p>
+                        <p class="exp-desc">
+                            Oversaw total life cycle focus for complex system designs from requirements development and
+                            architecture creation. Partnered with SMEs, program management, and engineering leadership
+                            to drive technical solutions and ensure requirements focused on "building the right thing."
                         </p>
-                        <div class="flex gap-2" style="margin-top: 1rem;">
-                            <span class="badge badge-primary">Technical Support</span>
-                            <span class="badge badge-secondary">Troubleshooting</span>
+                        <ul class="exp-bullets">
+                            <li>Designed and deployed hybrid-cloud infrastructure aligned with Zero Trust and OnPrem Cloud principles.</li>
+                            <li>Automated network operations, improving response times by 20% and reducing manual intervention.</li>
+                            <li>Developed and enforced policies to ensure high availability and compliance with SOX, PCI, and CPNI regulations.</li>
+                            <li>Mentored junior and senior engineers in troubleshooting, infrastructure best practices, and security-first design.</li>
+                        </ul>
+                        <div class="flex gap-2" style="margin-top: var(--space-4);">
+                            <span class="badge badge-primary">Cloud Security</span>
+                            <span class="badge badge-accent">Automation</span>
+                            <span class="badge badge-secondary">Architecture</span>
                         </div>
                     </div>
                 </div>
+
+                <div class="exp-item animate-fade-in">
+                    <div class="exp-year">9/2021 — 4/2024</div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Associate Engineer, Systems Architecture</h3>
+                        <p class="exp-company">T-Mobile · Seattle, WA</p>
+                        <p class="exp-desc">
+                            Designed and developed system architectures, defining key capabilities, performance requirements,
+                            and interface definitions. Developed models and architectural guidelines for current and future
+                            system development.
+                        </p>
+                        <ul class="exp-bullets">
+                            <li>Led firewall and perimeter security operations, supporting high-priority applications and audits for SOX/PCI compliance.</li>
+                            <li>Streamlined approval and validation workflows, reducing firewall rule turnaround times by 25%.</li>
+                            <li>Facilitated application migrations (PCF and TKE) while ensuring policy integrity and secure access during transition.</li>
+                            <li>Delivered technical documentation and collaborated with security, payment, and ops teams for infrastructure-aligned change control.</li>
+                        </ul>
+                        <div class="flex gap-2" style="margin-top: var(--space-4);">
+                            <span class="badge badge-primary">Firewall</span>
+                            <span class="badge badge-accent">SOX/PCI</span>
+                            <span class="badge badge-secondary">Migration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exp-item animate-fade-in">
+                    <div class="exp-year">4/2021 — 6/2021</div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Launch Engineer Intern</h3>
+                        <p class="exp-company">Firefly Aerospace</p>
+                        <p class="exp-desc">
+                            Developed launch pad safety beacon and public alert systems. Automated internal workflows
+                            to improve testing operations. Supported pad readiness during critical launch preparation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="exp-item animate-fade-in">
+                    <div class="exp-year">8/2015 — 5/2016</div>
+                    <div class="exp-content">
+                        <h3 class="exp-role">Technical Support Specialist</h3>
+                        <p class="exp-company">Wave Broadband</p>
+                        <p class="exp-desc">
+                            Delivered remote technical troubleshooting for broadband, TV, and voice services.
+                            Reduced service disruptions by 20% through accurate diagnostics and secure data handling.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -262,136 +211,33 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <div class="text-center mb-8">
-                <h2 class="text-gradient">Core Competencies</h2>
-                <p class="text-xl text-secondary">Technical skills and security expertise</p>
-            </div>
-            
-            <div style="max-width: 1000px; margin: 0 auto;">
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="mb-4">Security & Compliance</h3>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Zero Trust Architecture</span>
-                                <span class="skill-level">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Firewall & Network Security</span>
-                                <span class="skill-level">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Compliance (SOX, PCI, CPNI)</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Vulnerability Management</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%;"></div>
-                            </div>
-                        </div>
+            <span class="section-label">Skills</span>
+            <h2 class="section-heading">Core Competencies</h2>
 
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Incident Response</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>
-                        <h3 class="mb-4">Tools & Technologies</h3>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Zscaler (ZIA & ZPA)</span>
-                                <span class="skill-level">Expert</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Palo Alto / Checkpoint Firewalls</span>
-                                <span class="skill-level">Advanced</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">SIEM/SOAR Tools</span>
-                                <span class="skill-level">Proficient</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Cloud Security (AWS/Azure)</span>
-                                <span class="skill-level">Proficient</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Python Automation</span>
-                                <span class="skill-level">Proficient</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="skills-grid" style="max-width: 1000px;">
+                <div class="skill-group">
+                    <h4 class="skill-group-label">Zero Trust &amp; Network Security</h4>
+                    <p class="skill-group-items">Zscaler ZIA &amp; ZPA · Axis · Prisma Access · Palo Alto Firewall · Checkpoint · IAM &amp; SSO Integration · VPN Technologies · Firewall &amp; Perimeter Security</p>
                 </div>
-                
-                <div class="mt-8 text-center">
-                    <h4 class="mb-4">Additional Technologies & Frameworks</h4>
-                    <div class="flex flex-wrap gap-3 justify-center">
-                        <span class="tag">IAM & SSO</span>
-                        <span class="tag">Splunk</span>
-                        <span class="tag">ServiceNow</span>
-                        <span class="tag">Jira</span>
-                        <span class="tag">DLP Tools</span>
-                        <span class="tag">SaaS Security</span>
-                        <span class="tag">NIST Framework</span>
-                        <span class="tag">CIS Controls</span>
-                        <span class="tag">Risk Assessment</span>
-                        <span class="tag">Agile/Scrum</span>
-                        <span class="tag">Security Documentation</span>
-                        <span class="tag">Access Reviews</span>
-                    </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-label">Security Operations</h4>
+                    <p class="skill-group-items">SIEM/SOAR Tools · Splunk · Incident Response · Vulnerability Management · CASB Solutions · SaaS Security · DDoS/WAF (Cloudflare, Silverline) · NDR Tools</p>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-label">Compliance &amp; Governance</h4>
+                    <p class="skill-group-items">SOX · PCI-DSS · CPNI · NIST Framework · CIS Controls · Security Documentation &amp; Audits · Access Reviews · Risk Assessment &amp; Mitigation</p>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-label">Cloud &amp; Infrastructure</h4>
+                    <p class="skill-group-items">AWS · Azure · Google Cloud Platform · Cloud Migration · Configuration Auditing · Hybrid Cloud Architecture · DLP (Microsoft Purview, Conditional Access)</p>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-label">Tools &amp; Platforms</h4>
+                    <p class="skill-group-items">ServiceNow · Jira · Python · Agile/Scrum · Automation Tools · Email Protection (Proofpoint, Barracuda, SpamTitan, Mimecast)</p>
+                </div>
+                <div class="skill-group">
+                    <h4 class="skill-group-label">Leadership &amp; Communication</h4>
+                    <p class="skill-group-items">Project Management · Security Documentation · Mentorship · Cross-functional Collaboration · GRC Walkthroughs · Stakeholder Communication</p>
                 </div>
             </div>
         </div>
@@ -400,54 +246,34 @@
     <!-- Education Section -->
     <section id="education" class="section">
         <div class="container">
-            <div class="text-center mb-8">
-                <h2 class="text-gradient">Education</h2>
-                <p class="text-xl text-secondary">Academic credentials and certifications</p>
-            </div>
-            
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div class="grid grid-cols-1 gap-6">
-                    <div class="card card-gradient">
-                        <div class="flex justify-between items-start" style="margin-bottom: var(--space-3);">
-                            <div>
-                                <h3 class="card-title" style="margin-bottom: var(--space-2);">Master of Science, Information Technology</h3>
-                                <p style="color: var(--color-primary); font-weight: var(--font-semibold); margin-bottom: var(--space-2);">
-                                    Purdue University Global
-                                </p>
-                                <p class="card-description" style="margin-bottom: 0;">
-                                    Specialization: Cybersecurity
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <span class="section-label">Education</span>
+            <h2 class="section-heading">Academic Background</h2>
 
-                    <div class="card card-gradient">
-                        <div class="flex justify-between items-start" style="margin-bottom: var(--space-3);">
-                            <div>
-                                <h3 class="card-title" style="margin-bottom: var(--space-2);">Bachelor of Science, Computer Science</h3>
-                                <p style="color: var(--color-primary); font-weight: var(--font-semibold); margin-bottom: var(--space-2);">
-                                    Colorado State University Global
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="edu-list">
+                <div class="edu-item">
+                    <h3 class="edu-degree">Master of Science, Information Technology — Cybersecurity</h3>
+                    <p class="edu-school">Purdue University Global</p>
+                </div>
+                <div class="edu-item">
+                    <h3 class="edu-degree">Bachelor of Science, Computer Science</h3>
+                    <p class="edu-school">Colorado State University Global</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section section-lg">
+    <section class="section">
         <div class="container">
-            <div class="card card-glow text-center" style="padding: var(--space-12);">
-                <h2 style="margin-bottom: var(--space-4);">Let's Connect</h2>
-                <p style="font-size: var(--text-xl); color: var(--color-text-secondary); margin-bottom: var(--space-8); max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Interested in discussing cybersecurity solutions, Zero Trust architecture, or potential opportunities? 
-                    I'm always open to connecting with fellow security professionals and exploring new challenges.
+            <div class="cta-inner">
+                <h2 class="cta-heading">Let's connect.</h2>
+                <p class="cta-sub">
+                    Open to discussing cybersecurity solutions, Zero Trust architecture,
+                    or new opportunities with fellow security professionals.
                 </p>
-                <div class="flex gap-4 justify-center connect-buttons">
-                    <a href="contact.html" class="btn btn-primary btn-xl" aria-label="Contact Cheyenne Bounds">Contact Me</a>
-                    <a href="https://www.linkedin.com/in/cheyenne-bounds/" class="btn btn-outline btn-xl" target="_blank" rel="noopener noreferrer" aria-label="Cheyenne Bounds LinkedIn profile (opens in a new tab)">LinkedIn Profile</a>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="contact.html" class="btn btn-primary btn-xl">Get In Touch</a>
+                    <a href="https://www.linkedin.com/in/cheyenne-bounds/" class="btn btn-outline btn-xl" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -458,40 +284,23 @@
         <div class="container footer-content">
             <div class="footer-social">
                 <a href="https://www.linkedin.com/in/cheyenne-bounds/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                 </a>
                 <a href="mailto:contact@cheyennebounds.com" class="footer-social-link" aria-label="Email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
                     </svg>
                 </a>
             </div>
             <p class="footer-text">
-                &copy; 2025 Cheyenne Bounds. All rights reserved. Cybersecurity Engineer specializing in Zero Trust Architecture.
+                &copy; 2026 Cheyenne Bounds · cheyennebounds.com · Cybersecurity Engineer
             </p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

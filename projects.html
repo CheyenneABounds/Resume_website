@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects and work by Cheyenne Bounds — Cybersecurity Engineer specializing in Zero Trust Architecture and Security Operations.">
+    <title>Projects - Cheyenne Bounds</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="navbar-brand">Cheyenne Bounds</a>
+
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle menu">
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+                <span class="navbar-toggle-bar"></span>
+            </button>
+
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="index.html#home" class="navbar-link">Home</a></li>
+                <li><a href="index.html#about" class="navbar-link">About</a></li>
+                <li><a href="index.html#experience" class="navbar-link">Experience</a></li>
+                <li><a href="index.html#skills" class="navbar-link">Skills</a></li>
+                <li><a href="index.html#education" class="navbar-link">Education</a></li>
+                <li><a href="projects.html" class="navbar-link active">Projects</a></li>
+                <li><a href="blog.html" class="navbar-link">Blog</a></li>
+                <li><a href="contact.html" class="navbar-link">Contact</a></li>
+            </ul>
+
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme" title="Switch theme">◐</button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 50vh; padding: var(--space-20) 0;">
+        <div class="hero-background"></div>
+        <div class="container text-center">
+            <p class="hero-eyebrow">Portfolio</p>
+            <h1 style="font-size: var(--text-5xl); margin-bottom: var(--space-4);">Projects & Initiatives</h1>
+            <p style="color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">
+                Selected security engineering work — Zero Trust implementations, automation tooling, and compliance programs.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Work</span>
+            <h2 class="section-heading">Featured Projects</h2>
+
+            <div class="grid grid-cols-2 gap-8">
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">ZTNA Platform Rollout</h3>
+                    <p class="card-description">
+                        Led deployment of Zscaler ZIA &amp; ZPA across legacy and data center environments at T-Mobile,
+                        integrating SCIM provisioning with Microsoft Entra ID to enforce identity- and policy-based Zero Trust access.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Zscaler</span>
+                        <span class="badge badge-accent">Zero Trust</span>
+                        <span class="badge badge-secondary">Entra ID</span>
+                        <span class="badge badge-secondary">SCIM</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">Security Operations Automation</h3>
+                    <p class="card-description">
+                        Automated 42% of previously manual security and access management tasks, improving operational efficiency
+                        and reducing response times across the security operations pipeline.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Python</span>
+                        <span class="badge badge-accent">Automation</span>
+                        <span class="badge badge-secondary">ServiceNow</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">SOX / PCI / CPNI Compliance Program</h3>
+                    <p class="card-description">
+                        Participated in control effectiveness testing and remediation achieving 100% compliance with SOX, PCI, and CPNI
+                        requirements. Developed standardized audit evidence templates used across the engineering org.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">SOX</span>
+                        <span class="badge badge-accent">PCI-DSS</span>
+                        <span class="badge badge-secondary">CPNI</span>
+                        <span class="badge badge-secondary">Audit</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">Hybrid Cloud Architecture</h3>
+                    <p class="card-description">
+                        Designed and deployed hybrid-cloud infrastructure aligned with Zero Trust and OnPrem Cloud principles,
+                        automating network operations and improving response times by 20%.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">AWS</span>
+                        <span class="badge badge-accent">Azure</span>
+                        <span class="badge badge-secondary">Architecture</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">Firewall &amp; Perimeter Security Operations</h3>
+                    <p class="card-description">
+                        Led firewall and perimeter security operations supporting high-priority applications and compliance audits.
+                        Streamlined approval workflows reducing firewall rule turnaround times by 25%.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Palo Alto</span>
+                        <span class="badge badge-accent">Checkpoint</span>
+                        <span class="badge badge-secondary">Firewall</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">Launch Pad Safety Systems</h3>
+                    <p class="card-description">
+                        Developed launch pad safety beacon and public alert systems at Firefly Aerospace.
+                        Automated internal workflows to improve testing operations and supported pad readiness during critical launch preparation.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Automation</span>
+                        <span class="badge badge-accent">Safety Systems</span>
+                        <span class="badge badge-secondary">Aerospace</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/cheyenne-bounds/" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:contact@cheyennebounds.com" class="footer-social-link" aria-label="Email">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-text">
+                &copy; 2026 Cheyenne Bounds · cheyennebounds.com · Cybersecurity Engineer
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
