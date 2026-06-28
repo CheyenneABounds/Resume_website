@@ -52,6 +52,24 @@
         </div>
     </section>
 
+    <!-- AI-Augmented Security Operations -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Approach</span>
+            <h2 class="section-heading">AI-Augmented Security Operations</h2>
+            <p style="color: var(--color-text-secondary); max-width: 760px;">
+                I integrate AI into security operations with a purposeful, risk-based approach. I built a custom knowledge MCP (Model Context Protocol) server that puts authoritative Zscaler and security
+                guidance one query away, and authored a suite of AI "skills" that encode our
+                triage decision trees for Tier 1&ndash;3 incidents and service tasks across
+                internet access, private access, and endpoint clients. Connected to ServiceNow,
+                Splunk, and Zscaler through MCP, the assistant pulls ticket context, runs the
+                diagnostic gates, and drafts consistent, policy-aligned dispositions &mdash;
+                compressing hours of manual triage into minutes while keeping a human in the
+                loop for every decision.
+            </p>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section class="section">
         <div class="container">
@@ -61,10 +79,91 @@
             <div class="grid grid-cols-2 gap-8">
 
                 <div class="card card-gradient">
+                    <h3 class="card-title">Zscaler Knowledge MCP Server</h3>
+                    <p class="card-description">
+                        Built a custom Model Context Protocol (MCP) server that crawls and indexes
+                        ~19,000 chunks of vendor and internal security documentation into a local
+                        searchable store, giving an AI assistant instant semantic access to
+                        authoritative guidance during triage. Turned scattered PDFs and KB articles
+                        into a single queryable knowledge layer.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Python</span>
+                        <span class="badge badge-accent">MCP</span>
+                        <span class="badge badge-secondary">RAG</span>
+                        <span class="badge badge-secondary">SQLite</span>
+                        <span class="badge badge-secondary">AI</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">AI Triage Skill Suite</h3>
+                    <p class="card-description">
+                        Authored a suite of AI assistant skills that triage Tier 1&ndash;3 security incidents and service tasks
+                        &mdash; internet-access allow requests, private-access connectivity incidents, and endpoint-client log
+                        analysis. Each skill encodes the team's decision trees, policy gates, and approved response language,
+                        so the assistant drafts consistent, policy-aligned dispositions with a human reviewing every decision.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">AI / LLM</span>
+                        <span class="badge badge-accent">MCP</span>
+                        <span class="badge badge-secondary">ServiceNow</span>
+                        <span class="badge badge-secondary">Splunk</span>
+                        <span class="badge badge-secondary">Automation</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">DLP Rule Builder (CLI)</h3>
+                    <p class="card-description">
+                        Python CLI that ingests carrier billing documents, detects sensitive (CPNI) data patterns, and proposes
+                        ready-to-deploy DLP dictionary, engine, and policy configurations &mdash; including a regex-compatibility
+                        checker that validates expressions against the DLP engine's constraints before they ship.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Python</span>
+                        <span class="badge badge-accent">LLM</span>
+                        <span class="badge badge-secondary">DLP</span>
+                        <span class="badge badge-secondary">Regex</span>
+                        <span class="badge badge-secondary">Compliance</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">ServiceNow Pattern-Recognition Pipeline</h3>
+                    <p class="card-description">
+                        Pulled ~2 years and ~15,500 incidents and service tasks (including work-note and comment journals)
+                        and analyzed them to surface recurring issue patterns and the highest-value automation candidates,
+                        delivered as a prioritized report.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Python</span>
+                        <span class="badge badge-accent">ServiceNow</span>
+                        <span class="badge badge-secondary">Data Analysis</span>
+                        <span class="badge badge-secondary">Automation</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
+                    <h3 class="card-title">Policy-as-Code Platform</h3>
+                    <p class="card-description">
+                        Designed a central policy store feeding a CI/CD pipeline that enforces security policy consistently
+                        across multiple vendor platforms (Zscaler ZIA/ZPA, firewall, CASB). Part of a cyber-resiliency and
+                        disaster-recovery initiative to make policy versioned, reviewable, and redeployable.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Policy-as-Code</span>
+                        <span class="badge badge-accent">MongoDB</span>
+                        <span class="badge badge-secondary">CI/CD</span>
+                        <span class="badge badge-secondary">Zero Trust</span>
+                    </div>
+                </div>
+
+                <div class="card card-gradient">
                     <h3 class="card-title">ZTNA Platform Rollout</h3>
                     <p class="card-description">
-                        Led deployment of Zscaler ZIA &amp; ZPA across legacy and data center environments at T-Mobile,
-                        integrating SCIM provisioning with Microsoft Entra ID to enforce identity- and policy-based Zero Trust access.
+                        Deployed Zscaler ZIA &amp; ZPA across legacy and data-center environments, integrating SCIM provisioning
+                        with Microsoft Entra ID to enforce identity- and policy-based Zero Trust access.
                     </p>
                     <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
                         <span class="badge badge-primary">Zscaler</span>
@@ -77,8 +176,8 @@
                 <div class="card card-gradient">
                     <h3 class="card-title">Security Operations Automation</h3>
                     <p class="card-description">
-                        Automated 42% of previously manual security and access management tasks, improving operational efficiency
-                        and reducing response times across the security operations pipeline.
+                        Automated 42% of previously manual security and access-management tasks, cutting response times
+                        across the security operations pipeline.
                     </p>
                     <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
                         <span class="badge badge-primary">Python</span>
@@ -90,8 +189,8 @@
                 <div class="card card-gradient">
                     <h3 class="card-title">SOX / PCI / CPNI Compliance Program</h3>
                     <p class="card-description">
-                        Participated in control effectiveness testing and remediation achieving 100% compliance with SOX, PCI, and CPNI
-                        requirements. Developed standardized audit evidence templates used across the engineering org.
+                        Participated in control-effectiveness testing and remediation achieving 100% compliance with SOX, PCI,
+                        and CPNI requirements, and built standardized audit-evidence templates adopted across the engineering org.
                     </p>
                     <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
                         <span class="badge badge-primary">SOX</span>
@@ -104,21 +203,22 @@
                 <div class="card card-gradient">
                     <h3 class="card-title">Hybrid Cloud Architecture</h3>
                     <p class="card-description">
-                        Designed and deployed hybrid-cloud infrastructure aligned with Zero Trust and OnPrem Cloud principles,
-                        automating network operations and improving response times by 20%.
+                        Designed and deployed hybrid-cloud infrastructure aligned with Zero Trust principles, automating
+                        network operations and improving response times by 20%.
                     </p>
                     <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
                         <span class="badge badge-primary">AWS</span>
                         <span class="badge badge-accent">Azure</span>
                         <span class="badge badge-secondary">Architecture</span>
+                        <span class="badge badge-secondary">Automation</span>
                     </div>
                 </div>
 
                 <div class="card card-gradient">
                     <h3 class="card-title">Firewall &amp; Perimeter Security Operations</h3>
                     <p class="card-description">
-                        Led firewall and perimeter security operations supporting high-priority applications and compliance audits.
-                        Streamlined approval workflows reducing firewall rule turnaround times by 25%.
+                        Led firewall and perimeter security operations for high-priority applications and compliance audits,
+                        streamlining approval workflows to reduce firewall-rule turnaround times by 25%.
                     </p>
                     <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
                         <span class="badge badge-primary">Palo Alto</span>
@@ -128,19 +228,45 @@
                 </div>
 
                 <div class="card card-gradient">
-                    <h3 class="card-title">Launch Pad Safety Systems</h3>
+                    <h3 class="card-title">Launch Pad State Warning System</h3>
                     <p class="card-description">
-                        Developed launch pad safety beacon and public alert systems at Firefly Aerospace.
-                        Automated internal workflows to improve testing operations and supported pad readiness during critical launch preparation.
+                        Co-designed and built the hardware and software for a rocket-launchpad state warning system meeting
+                        USAF Space Systems Command range-safety standards (SSCMAN 91-710). Programmed safe/nominal/hazardous
+                        state-change logic in Lua to drive warning lights and audio, installed and tuned a siren and speaker
+                        array (with custom circuits to oscillate siren pitch), augmented legacy wiring, and validated coverage
+                        with decibel-meter testing.
                     </p>
                     <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
-                        <span class="badge badge-primary">Automation</span>
-                        <span class="badge badge-accent">Safety Systems</span>
+                        <span class="badge badge-primary">Lua</span>
+                        <span class="badge badge-accent">Embedded/Hardware</span>
+                        <span class="badge badge-secondary">State Machines</span>
+                        <span class="badge badge-secondary">Safety Systems</span>
                         <span class="badge badge-secondary">Aerospace</span>
                     </div>
                 </div>
 
+                <div class="card card-gradient">
+                    <h3 class="card-title">Leadership Dashboard Reporting</h3>
+                    <p class="card-description">
+                        Built Splunk dashboards and recurring executive reporting that turn raw security telemetry and program
+                        status into senior-leadership-level visibility &mdash; from international data-center web-traffic
+                        monitoring to resiliency-program status reporting.
+                    </p>
+                    <div class="flex gap-2 flex-wrap" style="margin-top: var(--space-4);">
+                        <span class="badge badge-primary">Splunk</span>
+                        <span class="badge badge-accent">Dashboards</span>
+                        <span class="badge badge-secondary">Reporting</span>
+                        <span class="badge badge-secondary">SecOps</span>
+                    </div>
+                </div>
+
             </div>
+
+            <p style="color: var(--color-text-secondary); margin-top: var(--space-8);">
+                <strong>Tooling &amp; Automation:</strong> a library of PowerShell and Python
+                utilities &mdash; port-reachability testing, reverse-DNS lookups, vRealize/VRA
+                search helpers, presentation generation, and session keep-alive.
+            </p>
         </div>
     </section>
 

@@ -1,7 +1,9 @@
-// Theme toggle — persists choice in localStorage
+// Theme toggle — light is default; persists choice in localStorage
 (function() {
   const saved = localStorage.getItem('cb-theme');
-  if (saved === 'light') {
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
     document.documentElement.setAttribute('data-theme', 'light');
   }
 })();
@@ -10,13 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const btn = document.getElementById('theme-toggle');
   if (!btn) return;
   btn.addEventListener('click', function() {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    if (isLight) {
-      document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('cb-theme', 'dark');
-    } else {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
       document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('cb-theme', 'light');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('cb-theme', 'dark');
     }
   });
 });
